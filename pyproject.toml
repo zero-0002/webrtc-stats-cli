@@ -17,3 +17,16 @@ webrtc-stats = "webrtc_stats_cli.__main__:main"
 
 [tool.setuptools]
 packages = ["webrtc_stats_cli"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
