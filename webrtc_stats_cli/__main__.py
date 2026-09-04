@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from pathlib import Path
 
 from .report import build_report
 
@@ -23,7 +24,10 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     try:
-        text = sys.stdin.read() if args.path == "-" else open(args.path, encoding="utf-8-sig").read()
+        if args.path == "-":
+            text = sys.stdin.read()
+        else:
+            text = Path(args.path).read_text(encoding="utf-8-sig")
     except OSError as exc:
         print(f"error: cannot read {args.path}: {exc}", file=sys.stderr)
         return 2
