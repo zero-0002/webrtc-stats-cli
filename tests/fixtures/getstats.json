@@ -1,0 +1,62 @@
+[
+  {
+    "id": "COT01_111",
+    "type": "codec",
+    "mimeType": "audio/opus",
+    "clockRate": 48000
+  },
+  {
+    "id": "CIT01_96",
+    "type": "codec",
+    "mimeType": "video/VP8",
+    "clockRate": 90000
+  },
+  {
+    "id": "IT01A2222222222",
+    "type": "inbound-rtp",
+    "kind": "audio",
+    "ssrc": 2222222222,
+    "codecId": "COT01_111",
+    "packetsReceived": 4820,
+    "packetsLost": 12,
+    "bytesReceived": 385600,
+    "jitter": 0.004
+  },
+  {
+    "id": "IT01V3333333333",
+    "type": "inbound-rtp",
+    "kind": "video",
+    "ssrc": 3333333333,
+    "codecId": "CIT01_96",
+    "packetsReceived": 19000,
+    "packetsLost": 190,
+    "bytesReceived": 20480000,
+    "jitter": 0.012,
+    "framesPerSecond": 29.5
+  },
+  {
+    "id": "OT01A4444444444",
+    "type": "outbound-rtp",
+    "kind": "audio",
+    "ssrc": 4444444444,
+    "codecId": "COT01_111",
+    "packetsSent": 4900,
+    "bytesSent": 392000
+  },
+  {
+    "id": "OT01V5555555555",
+    "type": "outbound-rtp",
+    "kind": "video",
+    "ssrc": 5555555555,
+    "codecId": "CIT01_96",
+    "packetsSent": 20100,
+    "bytesSent": 21504000,
+    "framesPerSecond": 30
+  },
+  {
+    "id": "T01",
+    "type": "transport",
+    "bytesSent": 21896000,
+    "bytesReceived": 20865600
+  }
+]
