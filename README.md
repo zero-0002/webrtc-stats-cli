@@ -31,4 +31,16 @@ webrtc-stats getstats.json
 - Codec (resolved via the `codec` records)
 - Bytes transferred, packet-loss ratio, jitter (ms) and frame rate
 
+## Development
+
+```bash
+pip install -e ".[dev]"
+pytest          # unit + CLI tests
+ruff format .   # formatting
+ruff check .    # linting
+```
+
+CI (`.github/workflows/build.yml`) runs the same lint, tests on Python
+3.9-3.13, a CLI smoke test on Linux/macOS/Windows, and a packaging check.
+
 MIT licensed.
